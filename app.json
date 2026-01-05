@@ -2,7 +2,7 @@
   "expo": {
     "name": "RUN",
     "slug": "run",
-    "icon": "./assets/images/runicon copy.png",
+    "icon": "./assets/images/runicon.png",
     "userInterfaceStyle": "dark"
   }
 }

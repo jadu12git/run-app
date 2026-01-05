@@ -39,7 +39,7 @@ export default function PendingScreen() {
       </Text>
 
         <TouchableOpacity
-        onPress={() => router.replace("/feed?status=pending")}
+        onPress={() => router.replace("/(tabs)/feed?status=pending")}
         style={{
             backgroundColor: "#fff",
             paddingVertical: 16,

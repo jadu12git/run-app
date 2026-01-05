@@ -2,7 +2,7 @@ import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
-export default function AuthScreen() {
+export default function LoginScreen() {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ export default function AuthScreen() {
           marginBottom: 8,
         }}
       >
-        Join RUN
+        Welcome back
       </Text>
 
       <Text
@@ -36,7 +36,7 @@ export default function AuthScreen() {
           marginBottom: 40,
         }}
       >
-        Sign up with your email to join your campus.
+        Log in to continue to your campus.
       </Text>
 
       {/* Email */}
@@ -76,9 +76,9 @@ export default function AuthScreen() {
         }}
       />
 
-      {/* Continue Button */}
+      {/* Login Button */}
       <TouchableOpacity
-        onPress={() => router.push("/school")}
+        onPress={() => router.replace("/feed")}
         style={{
           backgroundColor: "#fff",
           paddingVertical: 16,
@@ -93,21 +93,20 @@ export default function AuthScreen() {
             fontWeight: "bold",
           }}
         >
-          Continue
+          Log in
         </Text>
       </TouchableOpacity>
 
-        {/* Login link */}
-        <TouchableOpacity
+      {/* Back to Sign up */}
+      <TouchableOpacity
         style={{ marginTop: 24, alignItems: "center" }}
-        onPress={() => router.push("/login")}
-        >
+        onPress={() => router.replace("/auth")}
+      >
         <Text style={{ color: "#aaa" }}>
-            Already have an account?{" "}
-            <Text style={{ color: "#fff", fontWeight: "600" }}>Log in</Text>
+          New here?{" "}
+          <Text style={{ color: "#fff", fontWeight: "600" }}>Create an account</Text>
         </Text>
-        </TouchableOpacity>
-
+      </TouchableOpacity>
     </View>
   );
 }
